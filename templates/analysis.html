@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Performance Analysis</h1>
+<p>Here you can view the model's performance and metrics.</p>
+
+<!-- Example for confusion matrix -->
+<h2>Confusion Matrix</h2>
+<img src="{{ url_for('static', filename='confusion_matrix.png') }}" alt="Confusion Matrix">
+
+
+
+<h2>Feature Importance Stacking</h2>
+<img src="{{url_for('static',filename='feature_importance_stacking.png')}}" alt="feature_importance_stacking">
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Upload Dataset</h1>
+<form method="POST" enctype="multipart/form-data">
+    <label for="dataset">Choose Dataset:</label>
+    <input type="file" name="dataset" required>
+    <button type="submit">Upload</button>
+</form>
+
+{% if filename %}
+<h2>Dataset: {{ filename }}</h2>
+<h3>Preview Dataset:</h3>
+{{ tables|safe }}
+<!-- Buttons for training and testing -->
+<form method="POST" action="{{ url_for('train_model') }}">
+    <button type="submit">Train Model</button>
+</form>
+
+{% endif %}
+{% endblock %}
+
