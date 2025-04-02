@@ -5,7 +5,7 @@ import numpy as np
 np.random.seed(42)
 
 # Number of rows to generate
-num_rows = 20
+num_rows =10
 
 # Generate data
 data = {
